@@ -5,8 +5,8 @@ import SignUpPage from "./components/user/SignUpPage";
 function App() {
   return (
     <>
-      {/* <SignUpPage /> */}
-      <HomePage></HomePage>
+      <SignUpPage />
+      {/* <HomePage></HomePage> */}
     </>
   );
 }
