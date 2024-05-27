@@ -1,42 +1,93 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: auto;
+  background-color: #ffe9bc;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* CSS header */
+header {
+  display: flex;
+  padding: 10px;
+  gap: 70px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+header ul {
+  display: flex;
+  gap: 70px;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 500;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+li {
+  cursor: pointer;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header_btn {
+  display: flex;
+  gap: 15px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header_btn--icon-search {
+  color: white;
+  background-color: #fcbf49;
+  border-radius: 100%;
+  cursor: pointer;
 }
-
-.card {
-  padding: 2em;
+.header_btn--signup {
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  color: #fcbf49;
+  border: 2px solid #fcbf49;
+  border-radius: 4px;
+  cursor: pointer;
 }
-
-.read-the-docs {
-  color: #888;
+.header_btn--login {
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  color: white;
+  background-color: #fcbf49;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.header_hr {
+  margin-top: 15px;
+  border: 1.5px solid #fcbf49;
+}
+/* CSS footer */
+footer {
+  display: grid;
+  margin-top: 450px;
+  background-color: #fcbf49;
+}
+footer ul {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  font-size: 25px;
+  background-color: #fcbf49;
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+footer li {
+  background-color: #fcbf49;
+}
+.footer_hr {
+  width: 88%;
+  margin-top: 15px;
+  border: 2px solid black;
+}
+.footer_icon {
+  margin-top: 50px;
+  display: flex;
+  gap: 1155px;
+  background-color: #fcbf49;
+}
+.footer_4icon {
+  display: flex;
+  gap: 20px;
+  background-color: #fcbf49;
+}
+.footer_icon--item {
+  background-color: #fcbf49;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
