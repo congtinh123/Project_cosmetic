@@ -58,6 +58,17 @@ li {
   margin-top: 15px;
   border: 1.5px solid #fcbf49;
 }
+.header_icon-logout {
+  color: red;
+  cursor: pointer;
+}
+.header_user-name {
+  color: red;
+}
+.header_icon-cart {
+  color: red;
+  cursor: pointer;
+}
 /* CSS footer */
 footer {
   display: grid;

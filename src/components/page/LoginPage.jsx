@@ -4,8 +4,37 @@ import HttpsIcon from "@mui/icons-material/Https";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
+  const navigate = useNavigate();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorName, setErrorName] = useState("");
+  const [errorPassword, setErrorPassword] = useState("");
+  const user = useSelector((state) => state.users.users);
+  const handldeSubmit = (e) => {
+    e.preventDefault();
+    const index = user.findIndex((user) => user.username === username);
+    if (index !== -1) {
+      setErrorName("");
+      if (user[index].password === password) {
+        setErrorPassword("");
+        const access_token = {
+          username: user[index].username,
+          access_token: true,
+        };
+        localStorage.setItem("access_token", JSON.stringify(access_token));
+        navigate("/");
+      } else {
+        setErrorPassword("password is incorrect");
+      }
+    } else {
+      setErrorName("username is incorrect");
+    }
+  };
   return (
     <>
       <Header />
@@ -16,23 +45,27 @@ export default function LoginPage() {
           </div>
           <div className="signup_container_form">
             <h1>Hi,Welcome Back</h1>
-            <form>
+            <form onSubmit={handldeSubmit}>
               <div className="signup_container--form--icon--input">
                 <PersonIcon />
                 <input
                   className="signup_container--form--input"
                   type="text"
                   placeholder="Username"
+                  onChange={(e) => setUsername(e.target.value)}
                 />
               </div>
+              <span>{errorName}</span>
               <div className="signup_container--form--icon--input">
                 <HttpsIcon />
                 <input
                   className="signup_container--form--input"
                   type="password"
                   placeholder="Password"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
+              <span>{errorPassword}</span>
               <button className="signup_container--form--btn">Login</button>
             </form>
 

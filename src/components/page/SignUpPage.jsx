@@ -12,7 +12,6 @@ import { useDispatch } from "react-redux";
 import { userAction } from "../../store/slices/users.slice";
 export default function SignUpPage() {
   const users = useSelector((state) => state.users.users);
-  console.log("users", users);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -66,7 +65,6 @@ export default function SignUpPage() {
           username: username,
           email: email,
           password: password,
-          confirmPassword: confirmPassword,
         };
         axios
           .post("http://localhost:3000/users", newUser)
