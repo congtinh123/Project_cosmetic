@@ -1,8 +1,9 @@
 import React from "react";
 import PersonIcon from "@mui/icons-material/Person";
 import HttpsIcon from "@mui/icons-material/Https";
-import Header from "../product/Header";
-import Footer from "../product/Footer";
+import Header from "../layout/Header";
+import Footer from "../layout/Footer";
+import { Link } from "react-router-dom";
 
 export default function LoginPage() {
   return (
@@ -37,9 +38,9 @@ export default function LoginPage() {
 
             <div className="signup_container--already">
               <p>Don't have an account?</p>
-              <a className="signup_container--link" href="">
+              <Link to="/signup-page" className="signup_container--link">
                 Sign Up
-              </a>
+              </Link>
             </div>
           </div>
         </div>
