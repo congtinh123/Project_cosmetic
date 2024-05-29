@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import SearchIcon from "@mui/icons-material/Search";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import LogoutIcon from "@mui/icons-material/Logout";
+import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./style.scss";
 export default function Header() {
   const navigate = useNavigate();
   const navigateToSignup = () => {

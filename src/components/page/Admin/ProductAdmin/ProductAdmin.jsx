@@ -1,11 +1,11 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import HeaderAdmin from "../layout/HeaderAdmin";
-import { useState } from "react";
 import axios from "axios";
-import { productAction } from "../../store/slices/products.slice";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { productAction } from "../../../../store/slices/products.slice";
+import HeaderAdmin from "../../../layout/HeaderAdmin/HeaderAdmin";
+import "./style.scss";
 
-export default function ProductPage() {
+export default function ProductAdmin() {
   const products = useSelector((state) => state.products.products);
   const [openAddProduct, setOpenAddProduct] = useState(false);
   const [openText, setOpenText] = useState(false);
@@ -118,11 +118,11 @@ export default function ProductPage() {
                 <button onClick={handleAddProduct}>ADD</button>
               )}
             </form>
-            <img src="src/assets/image/regimg 1.png" width={560} height={300} />
+            <img src="src/assets/png/banner2.png" width={560} height={300} />
           </div>
         ) : (
           <div className="product-container-form-add">
-            <img src="src/assets/image/regimg 1.png" width={560} height={500} />
+            <img src="src/assets/png/banner2.png" width={560} height={500} />
           </div>
         )}
       </div>

@@ -1,8 +1,9 @@
 import React from "react";
-import HeaderAdmin from "../layout/HeaderAdmin";
 import { useSelector } from "react-redux";
+import HeaderAdmin from "../../../layout/HeaderAdmin/HeaderAdmin";
+import "./style.scss";
 
-export default function UsersPage() {
+export default function UserAdmin() {
   const users = useSelector((state) => state.users.users);
   console.log(users);
   return (
@@ -44,7 +45,7 @@ export default function UsersPage() {
             </tbody>
           </table>
         </div>
-        <img src="src/assets/image/regimg 1.png" width={800} height={700} />
+        <img src="src/assets/png/banner2.png" width={800} height={700} />
       </div>
     </>
   );

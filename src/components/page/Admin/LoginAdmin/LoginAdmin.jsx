@@ -1,10 +1,10 @@
-import React from "react";
-import PersonIcon from "@mui/icons-material/Person";
 import HttpsIcon from "@mui/icons-material/Https";
-import { useState } from "react";
+import PersonIcon from "@mui/icons-material/Person";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./style.scss";
 
-export default function LoginAdminPage() {
+export default function LoginAdmin() {
   const AdminUserName = "admin";
   const AdminPassword = 123456;
   const [password, setPassword] = useState("");
@@ -34,20 +34,18 @@ export default function LoginAdminPage() {
       }
     }
   };
+
   return (
-    <div>
-      <div className="signup_container">
+    <>
+      <div className="signin_container">
         <div>
-          <div>
-            <h2 className="signup_container_form--logo">Logo</h2>
-          </div>
-          <div className="signup_container_form">
+          <div className="signin_container_form">
             <h1>Hi,Welcome Back</h1>
             <form onSubmit={handleSubmit}>
-              <div className="signup_container--form--icon--input">
+              <div className="signin_container--form--icon--input">
                 <PersonIcon />
                 <input
-                  className="signup_container--form--input"
+                  className="signin_container--form--input"
                   type="text"
                   placeholder="Username"
                   onChange={(e) => {
@@ -56,10 +54,10 @@ export default function LoginAdminPage() {
                 />
               </div>
               <span>{errorName}</span>
-              <div className="signup_container--form--icon--input">
+              <div className="signin_container--form--icon--input">
                 <HttpsIcon />
                 <input
-                  className="signup_container--form--input"
+                  className="signin_container--form--input"
                   type="password"
                   placeholder="Password"
                   onChange={(e) => {
@@ -68,15 +66,15 @@ export default function LoginAdminPage() {
                 />
               </div>
               <span>{errorPassword}</span>
-              <button className="signup_container--form--btn">Login</button>
+              <button className="signin_container--form--btn">Login</button>
             </form>
-            <div className="signup_container--already"></div>
+            <div className="signin_container--already"></div>
           </div>
         </div>
-        <div className="signup_container-img">
-          <img src="src/assets/image/footer 1.png" width={900} height={900} />
+        <div className="signin_container-img">
+          <img src="src/assets/png/banner.png" />
         </div>
       </div>
-    </div>
+    </>
   );
 }

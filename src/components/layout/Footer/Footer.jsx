@@ -1,8 +1,9 @@
-import React from "react";
-import YouTubeIcon from "@mui/icons-material/YouTube";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import React from "react";
+import "./style.scss";
 export default function Footer() {
   return (
     <>
@@ -16,7 +17,7 @@ export default function Footer() {
         <hr className="footer_hr" />
         <div className="footer_icon">
           <h2>Logo</h2>
-          <div className="footer_4icon ">
+          <div className="footer_icon--list ">
             <YouTubeIcon className="footer_icon--item" />
             <FacebookIcon className="footer_icon--item" />
             <TwitterIcon className="footer_icon--item" />

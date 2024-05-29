@@ -1,12 +1,12 @@
-import React from "react";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import { useNavigate } from "react-router-dom";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { useState } from "react";
+import FormControl from "@mui/material/FormControl";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./style.scss";
 
-export default function AdminPage() {
+export default function HeaderAdmin() {
   const [age, setAge] = React.useState("");
   const [open, setOpen] = React.useState(false);
   const [AdminUserName, setAdminUserName] = useState(
