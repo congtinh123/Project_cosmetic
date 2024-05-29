@@ -2,14 +2,14 @@ import EmailIcon from "@mui/icons-material/Email";
 import GoogleIcon from "@mui/icons-material/Google";
 import HttpsIcon from "@mui/icons-material/Https";
 import PersonIcon from "@mui/icons-material/Person";
-import Footer from "../layout/Footer";
-import Header from "../layout/Header";
-import { Link, useNavigate } from "react-router-dom";
-import React, { useState } from "react";
 import axios from "axios";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { userAction } from "../../store/slices/users.slice";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { userAction } from "../../../../store/slices/users.slice";
+import Footer from "../../../layout/Footer/Footer";
+import Header from "../../../layout/Header/Header";
+
 export default function SignUpPage() {
   const users = useSelector((state) => state.users.users);
   const [username, setUsername] = useState("");
@@ -71,7 +71,7 @@ export default function SignUpPage() {
           .then((res) => {
             console.log(res);
             // dispatch(addUser(newUser));
-            dispatch(userAction.addUser(newUser));
+            dispatch(userAction.addUser(res.data));
             alert("Account created successfully");
             navigate("/login-page");
           })
@@ -88,7 +88,7 @@ export default function SignUpPage() {
       <Header />
       <div className="signup_container">
         <div className="signup_container-img">
-          <img src="src/assets/image/regimg 1.png" />
+          <img src="src/assets/png/banner2.png" />
         </div>
         <div>
           <div>
@@ -163,7 +163,7 @@ export default function SignUpPage() {
           </div>
         </div>
       </div>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }

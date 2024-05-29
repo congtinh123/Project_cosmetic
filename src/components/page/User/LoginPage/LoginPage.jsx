@@ -1,12 +1,11 @@
-import React from "react";
-import PersonIcon from "@mui/icons-material/Person";
 import HttpsIcon from "@mui/icons-material/Https";
-import Header from "../layout/Header";
-import Footer from "../layout/Footer";
-import { Link } from "react-router-dom";
+import PersonIcon from "@mui/icons-material/Person";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Footer from "../../../layout/Footer/Footer";
+import Header from "../../../layout/Header/Header";
+import "./style.scss";
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -38,47 +37,47 @@ export default function LoginPage() {
   return (
     <>
       <Header />
-      <div className="signup_container">
+      <div className="signin_container">
         <div>
           <div>
-            <h2 className="signup_container_form--logo">Logo</h2>
+            <h2 className="signin_container_form--logo">Logo</h2>
           </div>
-          <div className="signup_container_form">
+          <div className="signin_container_form">
             <h1>Hi,Welcome Back</h1>
             <form onSubmit={handldeSubmit}>
-              <div className="signup_container--form--icon--input">
+              <div className="signin_container--form--icon--input">
                 <PersonIcon />
                 <input
-                  className="signup_container--form--input"
+                  className="signin_container--form--input"
                   type="text"
                   placeholder="Username"
                   onChange={(e) => setUsername(e.target.value)}
                 />
               </div>
               <span>{errorName}</span>
-              <div className="signup_container--form--icon--input">
+              <div className="signin_container--form--icon--input">
                 <HttpsIcon />
                 <input
-                  className="signup_container--form--input"
+                  className="signin_container--form--input"
                   type="password"
                   placeholder="Password"
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <span>{errorPassword}</span>
-              <button className="signup_container--form--btn">Login</button>
+              <button className="signin_container--form--btn">Login</button>
             </form>
 
-            <div className="signup_container--already">
+            <div className="signin_container--already">
               <p>Don't have an account?</p>
-              <Link to="/signup-page" className="signup_container--link">
+              <Link to="/signin-page" className="signin_container--link">
                 Sign Up
               </Link>
             </div>
           </div>
         </div>
-        <div className="signup_container-img">
-          <img src="src/assets/image/footer 1.png" width={900} height={900} />
+        <div className="signin_container-img">
+          <img src="src/assets/png/banner.png" width={900} height={900} />
         </div>
       </div>
       <Footer />

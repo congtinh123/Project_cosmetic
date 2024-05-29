@@ -1,0 +1,32 @@
+$color_1: #007bff;
+$background-color_1: #fcbf49;
+$background-color_2: black;
+
+.header-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: $background-color_1;
+  border-bottom: 1px solid #ccc;
+  > div {
+    display: flex;
+    align-items: center;
+  }
+}
+.header-admin--name {
+  color: $color_1;
+  text-decoration: underline;
+}
+.header-admin--logout-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  color: $color_1;
+  &:hover {
+    fill: #0056b3;
+  }
+}
+.admin-page-img {
+  display: flex;
+  background-color: $background-color_2;
+}

@@ -1,0 +1,81 @@
+$color_1: white;
+$color_2: #fcbf49;
+$background-color_1: rgb(33, 30, 30);
+$background-color_2: black;
+$background-color_3: #fcbf49;
+
+/* CSS signin */
+.signin_container {
+  display: flex;
+  gap: 25px;
+  background-color: $background-color_1;
+  color: $color_1;
+}
+.signin_container--form--icon--input {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+.signin_container_form--logo {
+  margin-top: 20px;
+  color: $color_2;
+  font-size: 50px;
+}
+.signin_container_form {
+  margin-left: 100px;
+  margin-top: 50px;
+  text-align: center;
+}
+.signin_container_form--text {
+  padding: 15px;
+  font-size: 20px;
+}
+.signin_container--form--input {
+  width: 500px;
+  padding: 7px;
+  color: $color_1;
+  background-color: $background-color_2;
+  border: none;
+  padding-left: 15px;
+  font-size: 20px;
+}
+.signin_container--form--btn {
+  margin-top: 15px;
+  margin-left: 35px;
+  width: 500px;
+  height: 30px;
+  font-size: 16px;
+  color: $color_1;
+  background-color: $background-color_3;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.signin_container--form--btn--google--icon {
+  width: 500px;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 44px;
+  border: 2px solid #fcbf49;
+  color: $color_2;
+}
+.signin_container--form--btn--google {
+  width: 490px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  color: $color_2;
+  cursor: pointer;
+  background-color: $background-color_2;
+}
+.signin_container--already {
+  font-size: 20px;
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  margin-left: 170px;
+}
+.signin_container--link {
+  text-decoration: none;
+  color: $color_2;
+}

@@ -1,0 +1,90 @@
+$color_1: #fff;
+$color_2: #007bff;
+$background-color_1: #fcbf49;
+$background-color_2: rgb(255, 255, 255);
+$background-color_3: #eda705;
+$background-color_4: #007bff;
+$background-color_5: #0056b3;
+
+/* CSS USER PAGE */
+.user-page-table {
+  margin-left: 25px;
+  display: flex;
+  gap: 200px;
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  thead {
+    background-color: $background-color_1;
+  }
+  th {
+    padding: 8px;
+    text-align: left;
+    border-top: 1px solid #ddd;
+  }
+  td {
+    padding: 8px;
+    text-align: left;
+    border-top: 1px solid #ddd;
+  }
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: $background-color_2;
+      }
+      &:hover {
+        background-color: $background-color_3;
+      }
+    }
+  }
+}
+.user-page-table-btn {
+  margin-top: 10px;
+  button {
+    padding: 8px 12px;
+    margin-right: 10px;
+    background-color: $background-color_4;
+    color: $color_1;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      background-color: $background-color_5;
+    }
+  }
+}
+.user-page-form {
+  margin: 20px 0;
+  h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: $color_2;
+  }
+  form {
+    display: flex;
+    align-items: center;
+  }
+  input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+  button {
+    padding: 8px 12px;
+    background-color: $background-color_4;
+    color: $color_1;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      background-color: $background-color_5;
+    }
+  }
+}

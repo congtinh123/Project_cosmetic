@@ -5,18 +5,110 @@
       "username": "thanhcong123",
       "email": "thanhcong@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "b3f9",
+      "username": "huynhcongtinh",
+      "email": "congtinh@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "0932",
+      "username": "tranducduy",
+      "email": "duy@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "ed49",
+      "username": "maixuansang",
+      "email": "sang@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "873c",
+      "username": "phatgia",
+      "email": "phatgia@asfh.com",
+      "password": "12345"
+    },
+    {
+      "id": "d851",
+      "username": "phatgia",
+      "email": "phatgia@asfh.com",
+      "password": "12345"
+    },
+    {
+      "id": "adcf",
+      "username": "phatgia",
+      "email": "phatgia@asfh.com",
+      "password": "12345"
+    },
+    {
+      "id": "88f3",
+      "username": "huynhthanhcong",
+      "email": "thanhcong@gmail.com",
+      "password": "123"
     }
   ],
   "products": [
     {
       "id": "1",
-      "name": "Product 1",
-      "price": 100
+      "image": "https://cocoshop.vn/assets/shops/2021_03/phan-mat-karadium-4-o-bling-fit-bijou-box-shadow-6.png",
+      "price": 100,
+      "productname": "Product 1"
     },
     {
       "id": "2",
-      "name": "Product 2",
-      "price": 200
+      "image": "https://cocoshop.vn/assets/shops/2021_03/phan-mat-karadium-4-o-bling-fit-bijou-box-shadow-6.png",
+      "price": 100,
+      "productname": "Product 1"
+    },
+    {
+      "id": "3",
+      "image": "https://cocoshop.vn/assets/shops/2021_03/phan-mat-karadium-4-o-bling-fit-bijou-box-shadow-6.png",
+      "price": 100,
+      "productname": "Product 1"
+    },
+    {
+      "id": "4",
+      "image": "https://cocoshop.vn/assets/shops/2021_03/phan-mat-karadium-4-o-bling-fit-bijou-box-shadow-6.png",
+      "price": 100,
+      "productname": "Product 1"
+    },
+    {
+      "id": "5",
+      "image": "https://cocoshop.vn/assets/shops/2021_03/phan-mat-karadium-4-o-bling-fit-bijou-box-shadow-6.png",
+      "price": 100,
+      "productname": "Product 1"
+    },
+    {
+      "id": "2f30",
+      "image": "https://cocoshop.vn/assets/shops/2020_12/phan-phu-dang-nen-eglips-barbie.jpg",
+      "productname": "product1",
+      "price": "12345"
+    },
+    {
+      "id": "5575",
+      "image": "https://cocoshop.vn/assets/shops/2020_12/bang-phan-mat-maybelline-new-york-the-city-mini-palette-12.jpg",
+      "productname": "product 2",
+      "price": "789"
+    },
+    {
+      "id": "1bf0",
+      "image": "https://cocoshop.vn/assets/shops/2020_12/bang-phan-mat-maybelline-new-york-the-city-mini-palette-12.jpg",
+      "productname": "product 2",
+      "price": "789"
+    },
+    {
+      "id": "af0e",
+      "image": "https://cocoshop.vn/assets/shops/2020_12/bang-phan-mat-maybelline-new-york-the-city-mini-palette-12.jpg",
+      "productname": "product 2",
+      "price": "789"
+    },
+    {
+      "id": "d53b",
+      "image": "https://cocoshop.vn/assets/shops/2020_12/bang-phan-mat-maybelline-new-york-the-city-mini-palette-12.jpg",
+      "productname": "product 2",
+      "price": "789"
     }
   ]
 }
