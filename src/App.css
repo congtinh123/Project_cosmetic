@@ -187,3 +187,250 @@ footer li {
   text-decoration: none;
   color: #fcbf49;
 }
+.header-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fcbf49;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-admin > div {
+  display: flex;
+  align-items: center;
+}
+
+.header-admin--name {
+  color: #007bff;
+  text-decoration: underline;
+}
+.header-admin--logout-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #007bff;
+}
+.header-admin--logout-icon:hover {
+  fill: #0056b3;
+}
+.admin-page-img {
+  display: flex;
+  background-color: black;
+}
+/* CSS USER PAGE */
+.user-page-table {
+  margin-left: 25px;
+  display: flex;
+  gap: 200px;
+}
+
+.user-page-table h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.user-page-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.user-page-table thead {
+  background-color: #fcbf49;
+}
+
+.user-page-table th,
+.user-page-table td {
+  padding: 8px;
+  text-align: left;
+  border-top: 1px solid #ddd;
+}
+
+.user-page-table tbody tr:nth-child(even) {
+  background-color: rgb(255, 255, 255);
+}
+
+.user-page-table tbody tr:hover {
+  background-color: #eda705;
+}
+
+.user-page-table-btn {
+  margin-top: 10px;
+}
+
+.user-page-table-btn button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-page-table-btn button:hover {
+  background-color: #0056b3;
+}
+
+.user-page-form {
+  margin: 20px 0;
+}
+
+.user-page-form h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.user-page-form form {
+  display: flex;
+  align-items: center;
+}
+
+.user-page-form input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.user-page-form button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-page-form button:hover {
+  background-color: #0056b3;
+}
+/* CSS PRODUCT PAGE */
+.product-table h1 {
+  font-size: 50px;
+  color: #007bff;
+}
+
+.product-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.product-table thead {
+  background-color: #fcbf49;
+  font-size: 20px;
+}
+
+.product-table th,
+.product-table td {
+  padding: 8px;
+  text-align: left;
+  border-top: 1px solid #ddd;
+}
+
+.product-table tbody tr:nth-child(even) {
+  background-color: rgb(255, 255, 255);
+}
+
+.product-table tbody tr:hover {
+  background-color: #eda705;
+}
+
+.product-table-btn button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-table-btn button:hover {
+  background-color: #0056b3;
+}
+.product-table-form {
+  display: flex;
+  margin: 15px 0;
+  gap: 200px;
+}
+
+.product-table-form h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.product-table-form form {
+  display: flex;
+  align-items: center;
+}
+
+.product-table-form input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 300px;
+}
+
+.product-table-form button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-table-form button:hover {
+  background-color: #0056b3;
+}
+.product-container {
+  display: flex;
+  gap: 100px;
+  margin-top: 40px;
+  margin-left: 25px;
+}
+/* CSS FORM PRODUCT ADD */
+.product-container-form-add {
+  width: 600px;
+  height: 600px;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.product-container-form-add h2 {
+  font-size: 27px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.product-container-form-add form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.product-container-form-add form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-container-form-add form button:hover {
+  background-color: #0056b3;
+}
+.product-container-form-add img {
+  margin-top: 25px;
+}

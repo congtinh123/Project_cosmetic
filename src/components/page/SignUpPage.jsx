@@ -71,7 +71,7 @@ export default function SignUpPage() {
           .then((res) => {
             console.log(res);
             // dispatch(addUser(newUser));
-            dispatch(userAction.addUser(newUser));
+            dispatch(userAction.addUser(res.data));
             alert("Account created successfully");
             navigate("/login-page");
           })
