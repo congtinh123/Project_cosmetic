@@ -25,61 +25,19 @@
       "password": "12345"
     },
     {
-      "id": "873c",
-      "username": "phatgia",
-      "email": "phatgia@asfh.com",
-      "password": "12345"
+      "id": "3105",
+      "username": "nguyenthehien",
+      "email": "hien@gmail.com",
+      "password": "123"
     },
     {
-      "id": "d851",
-      "username": "phatgia",
-      "email": "phatgia@asfh.com",
-      "password": "12345"
-    },
-    {
-      "id": "adcf",
-      "username": "phatgia",
-      "email": "phatgia@asfh.com",
-      "password": "12345"
-    },
-    {
-      "id": "88f3",
-      "username": "huynhthanhcong",
-      "email": "thanhcong@gmail.com",
+      "id": "a7d4",
+      "username": "nguyenvana",
+      "email": "nguyen@fgfg.com",
       "password": "123"
     }
   ],
   "products": [
-    {
-      "id": "1",
-      "image": "https://cocoshop.vn/assets/shops/2021_03/phan-mat-karadium-4-o-bling-fit-bijou-box-shadow-6.png",
-      "price": 100,
-      "productname": "Product 1"
-    },
-    {
-      "id": "2",
-      "image": "https://cocoshop.vn/assets/shops/2021_03/phan-mat-karadium-4-o-bling-fit-bijou-box-shadow-6.png",
-      "price": 100,
-      "productname": "Product 1"
-    },
-    {
-      "id": "3",
-      "image": "https://cocoshop.vn/assets/shops/2021_03/phan-mat-karadium-4-o-bling-fit-bijou-box-shadow-6.png",
-      "price": 100,
-      "productname": "Product 1"
-    },
-    {
-      "id": "4",
-      "image": "https://cocoshop.vn/assets/shops/2021_03/phan-mat-karadium-4-o-bling-fit-bijou-box-shadow-6.png",
-      "price": 100,
-      "productname": "Product 1"
-    },
-    {
-      "id": "5",
-      "image": "https://cocoshop.vn/assets/shops/2021_03/phan-mat-karadium-4-o-bling-fit-bijou-box-shadow-6.png",
-      "price": 100,
-      "productname": "Product 1"
-    },
     {
       "id": "2f30",
       "image": "https://cocoshop.vn/assets/shops/2020_12/phan-phu-dang-nen-eglips-barbie.jpg",
@@ -87,28 +45,34 @@
       "price": "12345"
     },
     {
-      "id": "5575",
-      "image": "https://cocoshop.vn/assets/shops/2020_12/bang-phan-mat-maybelline-new-york-the-city-mini-palette-12.jpg",
-      "productname": "product 2",
-      "price": "789"
-    },
-    {
-      "id": "1bf0",
-      "image": "https://cocoshop.vn/assets/shops/2020_12/bang-phan-mat-maybelline-new-york-the-city-mini-palette-12.jpg",
-      "productname": "product 2",
-      "price": "789"
-    },
-    {
-      "id": "af0e",
-      "image": "https://cocoshop.vn/assets/shops/2020_12/bang-phan-mat-maybelline-new-york-the-city-mini-palette-12.jpg",
-      "productname": "product 2",
-      "price": "789"
-    },
-    {
       "id": "d53b",
       "image": "https://cocoshop.vn/assets/shops/2020_12/bang-phan-mat-maybelline-new-york-the-city-mini-palette-12.jpg",
       "productname": "product 2",
       "price": "789"
+    },
+    {
+      "id": "a17a",
+      "image": "https://media.hcdn.vn/catalog/product/f/a/facebook-dynamic-253900006-1695973833_img_220x220_0dff4c_fit_center.jpg",
+      "productname": "kem chống nắng",
+      "price": "100000"
+    },
+    {
+      "id": "fc3e",
+      "image": "https://media.hcdn.vn/catalog/category/9_1_img_250x250_8e0796_fit_center.jpg",
+      "productname": "kem dưỡng da",
+      "price": "100000"
+    },
+    {
+      "id": "465a",
+      "image": "https://media.hcdn.vn/catalog/category/19_3_img_250x250_8e0796_fit_center.jpg",
+      "productname": "sữa rửa mặt",
+      "price": "50"
+    },
+    {
+      "id": "0a73",
+      "image": "https://media.hcdn.vn/catalog/product/f/a/facebook-dynamic-308100015-1696313565_img_220x220_0dff4c_fit_center.png",
+      "productname": "Tẩy Tế Bào Chết",
+      "price": "90"
     }
   ]
 }

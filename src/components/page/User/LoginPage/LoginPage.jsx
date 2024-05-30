@@ -70,7 +70,7 @@ export default function LoginPage() {
 
             <div className="signin_container--already">
               <p>Don't have an account?</p>
-              <Link to="/signin-page" className="signin_container--link">
+              <Link to="/signup-page" className="signin_container--link">
                 Sign Up
               </Link>
             </div>

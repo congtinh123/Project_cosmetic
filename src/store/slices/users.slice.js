@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+
 const userSlice = createSlice({
   name: "users",
   initialState: {
@@ -10,6 +11,15 @@ const userSlice = createSlice({
   reducers: {
     addUser: (state, action) => {
       state.users.push(action.payload);
+    },
+    deleteUser: (state, action) => {
+      state.users = state.users.filter((user) => user.id !== action.payload);
+    },
+    sortUser: (state, action) => {
+      state.users = action.payload;
+    },
+    getUserList: (state, action) => {
+      state.users = action.payload;
     },
   },
   extraReducers: (builder) => {

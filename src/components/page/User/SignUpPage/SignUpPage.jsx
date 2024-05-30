@@ -9,7 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { userAction } from "../../../../store/slices/users.slice";
 import Footer from "../../../layout/Footer/Footer";
 import Header from "../../../layout/Header/Header";
-
+import "./style.scss";
 export default function SignUpPage() {
   const users = useSelector((state) => state.users.users);
   const [username, setUsername] = useState("");

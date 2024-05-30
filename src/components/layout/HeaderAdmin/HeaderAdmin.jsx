@@ -26,13 +26,13 @@ export default function HeaderAdmin() {
     setOpen(true);
   };
   const navigateToLoginAdmin = () => {
-    navigate("/login-admin-page");
+    navigate("/admin-page-login");
   };
   const navigateToUser = () => {
     if (AdminUserName === "") {
-      navigate("/login-admin-page");
+      navigate("/admin-page-login");
     } else {
-      navigate("/user-page");
+      navigate("/user-admin");
     }
   };
   const navigateToAdminPage = () => {
@@ -40,7 +40,7 @@ export default function HeaderAdmin() {
   };
   const navigateToProduct = () => {
     if (AdminUserName === "") {
-      navigate("/login-admin-page");
+      navigate("/admin-page-login");
     } else {
       navigate("/product-page");
     }
@@ -48,7 +48,7 @@ export default function HeaderAdmin() {
   const logOutAdminUser = () => {
     localStorage.removeItem("AdminUserName");
     setAdminUserName("");
-    navigate("/admin-page");
+    navigate("/admin-page-login");
   };
 
   return (
@@ -66,9 +66,6 @@ export default function HeaderAdmin() {
               label="Age"
               onChange={handleChange}
             >
-              <MenuItem onClick={navigateToAdminPage} value={0}>
-                Admin Page
-              </MenuItem>
               {AdminUserName === "" ? (
                 <MenuItem onClick={navigateToLoginAdmin} value={10}>
                   Login

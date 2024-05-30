@@ -11,6 +11,20 @@ const productSlice = createSlice({
     addProduct: (state, action) => {
       state.products.push(action.payload);
     },
+    deleteProduct: (state, action) => {
+      state.products = state.products.filter(
+        (product) => product.id !== action.payload
+      );
+    },
+    editProduct: (state, action) => {
+      const index = state.products.findIndex(
+        (product) => product.id === action.payload.id
+      );
+      state.products[index] = action.payload;
+    },
+    getProductList: (state, action) => {
+      state.products = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(getProductList.pending, (state, action) => {

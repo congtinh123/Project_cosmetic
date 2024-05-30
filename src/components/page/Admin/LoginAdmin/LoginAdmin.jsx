@@ -28,7 +28,7 @@ export default function LoginAdmin() {
       if (username == AdminUserName && password == AdminPassword) {
         alert("Login Success");
         localStorage.setItem("AdminUserName", JSON.stringify(AdminUserName));
-        navigate("/admin-page");
+        navigate("/user-admin");
       } else {
         alert("Login Failed");
       }
