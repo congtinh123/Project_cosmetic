@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { productAction } from "../../../../store/slices/products.slice";
 import HeaderAdmin from "../../../layout/HeaderAdmin/HeaderAdmin";
 import "./style.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function ProductAdmin() {
   const products = useSelector((state) => state.products.products);
@@ -13,16 +15,44 @@ export default function ProductAdmin() {
   const [image, setImage] = useState("");
   const [productName, setProductName] = useState("");
   const [price, setPrice] = useState("");
+  const [searchProduct, setSearchProduct] = useState("");
   const dispatch = useDispatch();
+  const [editId, setEditId] = useState(null);
+  // phan trang
+  const [currentPage, setCurrentPage] = useState(1);
+  const recordsPerPage = 4;
+  const lastIndex = currentPage * recordsPerPage;
+  const firstIndex = lastIndex - recordsPerPage;
+  const records = products.slice(firstIndex, lastIndex);
+  const npage = Math.ceil(products.length / recordsPerPage);
+  const numbers = [...Array(npage + 1).keys()].slice(1);
+  //phan trang
+
   const handleOpenAddProduct = () => {
-    setOpenAddProduct(!openAddProduct);
+    if (!openAddProduct) {
+      setOpenAddProduct(!openAddProduct);
+    }
     setOpenText(false);
     setOpenBtn(false);
+    setImage("");
+    setProductName("");
+    setPrice("");
   };
-  const handleOpenEditProduct = () => {
-    setOpenAddProduct(!openAddProduct);
+  const handleOpenEditProduct = (id) => {
+    if (!openAddProduct) {
+      setOpenAddProduct(!openAddProduct);
+    }
     setOpenText(true);
     setOpenBtn(true);
+
+    const product = products.find((product) => product.id === id);
+    setImage(product.image);
+    setProductName(product.productname);
+    setPrice(product.price);
+    setEditId(id);
+  };
+  const handleCloseForm = () => {
+    setOpenAddProduct(false);
   };
   const handleAddProduct = (event) => {
     event.preventDefault();
@@ -35,11 +65,75 @@ export default function ProductAdmin() {
       .post("http://localhost:3000/products", newProduct)
       .then((response) => {
         dispatch(productAction.addProduct(response.data));
+        alert("Add success");
       })
       .catch((error) => {
         console.log(error);
       });
   };
+  const handleDeleteProduct = (id) => {
+    axios
+      .delete(`http://localhost:3000/products/${id}`)
+      .then((response) => {
+        dispatch(productAction.deleteProduct(id));
+        alert("Delete success");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const handleEditProduct = (event) => {
+    event.preventDefault();
+    const editProduct = {
+      image: image,
+      productname: productName,
+      price: price,
+    };
+    axios
+      .patch(`http://localhost:3000/products/${editId}`, editProduct)
+      .then((response) => {
+        dispatch(productAction.editProduct(response.data));
+        alert("Edit success");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const handleSearchProduct = (event) => {
+    event.preventDefault();
+    if (searchProduct === "") {
+      alert("Please enter product name");
+      window.location.reload();
+    } else {
+      axios
+        .get(`http://localhost:3000/products?productname=${searchProduct}`)
+        .then((response) => {
+          if (response.data.length === 0) {
+            alert("Product not found");
+            window.location.reload();
+          }
+          dispatch(productAction.getProductList(response.data));
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  };
+  // phan trang
+  function prePage() {
+    if (currentPage !== 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  }
+  function changeCPage(id) {
+    setCurrentPage(id);
+  }
+  function nextPage() {
+    if (currentPage !== npage) {
+      setCurrentPage(currentPage + 1);
+    }
+  }
+  // phan trang
   return (
     <>
       <HeaderAdmin />
@@ -47,15 +141,19 @@ export default function ProductAdmin() {
         <div className="product-table">
           <div className="product-table-form">
             <h1>Products</h1>
-            <form>
-              <input type="text" placeholder="Search product" />
-              <button>Search</button>
+            <form onSubmit={handleSearchProduct}>
+              <input
+                type="text"
+                placeholder="Search product"
+                onChange={(e) => setSearchProduct(e.target.value)}
+              />
+              <button type="submit">Search</button>
             </form>
           </div>
           <table>
             <thead>
               <tr>
-                <th>Id</th>
+                <th>#</th>
                 <th>Image</th>
                 <th>Product Name</th>
                 <th>Price</th>
@@ -63,9 +161,9 @@ export default function ProductAdmin() {
               </tr>
             </thead>
             <tbody>
-              {products.map((product) => (
-                <tr key={product.id}>
-                  <td>{product.id}</td>
+              {records.map((product, i) => (
+                <tr key={i}>
+                  <td>{i + 1}</td>
                   <td>
                     <img src={product.image} width={100} height={70} />
                   </td>
@@ -75,20 +173,56 @@ export default function ProductAdmin() {
                   <td>
                     <div className="product-table-btn">
                       <button onClick={handleOpenAddProduct}>Add</button>
-                      <button onClick={handleOpenEditProduct}>Edit</button>
-                      <button>Delete</button>
+                      <button onClick={() => handleOpenEditProduct(product.id)}>
+                        Edit
+                      </button>
+                      <button onClick={() => handleDeleteProduct(product.id)}>
+                        Delete
+                      </button>
                     </div>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
+          <nav>
+            <ul className="pagination">
+              <li className="page-item">
+                <a href="#" className="page-link" onClick={prePage}>
+                  Prev
+                </a>
+              </li>
+              {numbers.map((n, i) => (
+                <li
+                  className={`page-item ${currentPage === n ? `active` : ""}`}
+                  key={i}
+                >
+                  <a
+                    href="#"
+                    className="page-link"
+                    onClick={() => changeCPage(n)}
+                  >
+                    {n}
+                  </a>
+                </li>
+              ))}
+              <li className="page-item">
+                <a href="#" className="page-link" onClick={nextPage}>
+                  Next
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
         {openAddProduct ? (
           <div className="product-container-form-add">
-            {openText ? <h2>Edit Product</h2> : <h2>Add Product</h2>}
+            <div className="flax-close-icon">
+              {openText ? <h2>Edit Product</h2> : <h2>Add Product</h2>}
+              <CloseIcon className="close-icon" onClick={handleCloseForm} />
+            </div>
             <form>
               <input
+                value={image}
                 onChange={(e) => {
                   setImage(e.target.value);
                 }}
@@ -97,6 +231,7 @@ export default function ProductAdmin() {
               />
               <br />
               <input
+                value={productName}
                 onChange={(e) => {
                   setProductName(e.target.value);
                 }}
@@ -105,6 +240,7 @@ export default function ProductAdmin() {
               />
               <br />
               <input
+                value={price}
                 onChange={(e) => {
                   setPrice(e.target.value);
                 }}
@@ -113,7 +249,7 @@ export default function ProductAdmin() {
               />
               <br />
               {openBtn ? (
-                <button>EDIT</button>
+                <button onClick={handleEditProduct}>EDIT</button>
               ) : (
                 <button onClick={handleAddProduct}>ADD</button>
               )}

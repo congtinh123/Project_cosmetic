@@ -132,3 +132,14 @@ $background-color_5: #0056b3;
     margin-top: 25px;
   }
 }
+.flax-close-icon {
+  display: flex;
+  gap: 350px;
+}
+.close-icon {
+  color: $background-color_4;
+  cursor: pointer;
+  &:hover {
+    color: red;
+  }
+}

@@ -8,8 +8,7 @@ header {
   margin-top: 10px;
   margin-left: 100px;
   display: flex;
-  padding: 5px 0;
-  gap: 250px;
+  gap: 170px;
   ul {
     display: flex;
     gap: 70px;
@@ -19,9 +18,12 @@ header {
   }
 }
 li {
+  margin-top: 17px;
   cursor: pointer;
 }
 .header_btn {
+  align-items: center;
+  justify-content: center;
   display: flex;
   gap: 15px;
 }
