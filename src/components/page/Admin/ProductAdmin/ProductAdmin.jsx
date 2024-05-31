@@ -66,6 +66,9 @@ export default function ProductAdmin() {
       .then((response) => {
         dispatch(productAction.addProduct(response.data));
         alert("Add success");
+        setImage("");
+        setProductName("");
+        setPrice("");
       })
       .catch((error) => {
         console.log(error);
@@ -94,6 +97,9 @@ export default function ProductAdmin() {
       .then((response) => {
         dispatch(productAction.editProduct(response.data));
         alert("Edit success");
+        setImage("");
+        setProductName("");
+        setPrice("");
       })
       .catch((error) => {
         console.log(error);
@@ -169,7 +175,7 @@ export default function ProductAdmin() {
                   </td>
 
                   <td>{product.productname}</td>
-                  <td>{product.price}</td>
+                  <td>${product.price}</td>
                   <td>
                     <div className="product-table-btn">
                       <button onClick={handleOpenAddProduct}>Add</button>

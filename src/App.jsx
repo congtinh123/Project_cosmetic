@@ -10,6 +10,8 @@ import SignUpPage from "./components/page/User/SignUpPage/SignUpPage";
 import "./global.scss";
 import { getProductList } from "./store/slices/products.slice";
 import { getUserList } from "./store/slices/users.slice";
+import DetailPage from "./components/page/User/ProductDetailPage/DetailPage";
+import Cart from "./components/page/User/Cart/Cart";
 
 function App() {
   const dispatch = useDispatch();
@@ -28,6 +30,8 @@ function App() {
         <Route path="/admin-page-login" element={<LoginAdmin />} />
         <Route path="/user-admin" element={<UserAdmin />} />
         <Route path="product-page" element={<ProductAdmin />} />
+        <Route path="/detail-page/:id" element={<DetailPage />} />
+        <Route path="cart" element={<Cart />} />
       </Routes>
     </BrowserRouter>
   );

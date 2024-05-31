@@ -86,7 +86,7 @@ export default function HeaderAdmin() {
         <b>ADMIN PAGE</b>
         <div>
           {AdminUserName !== "" ? (
-            <h2 className="header-admin--name">Xin Chào {AdminUserName}</h2>
+            <h2 className="header-admin--name">Hello {AdminUserName}</h2>
           ) : (
             ""
           )}
@@ -96,7 +96,7 @@ export default function HeaderAdmin() {
               className="header-admin--logout-icon"
             />
           ) : (
-            <h2 className="header-admin--name">Bạn Cần Đăng Nhập</h2>
+            <h2 className="header-admin--name">You need to login!</h2>
           )}
         </div>
       </div>

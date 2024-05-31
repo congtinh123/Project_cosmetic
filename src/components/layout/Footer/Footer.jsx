@@ -8,15 +8,21 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <ul>
-          <li>Trang Chủ</li>
-          <li>Thông Tin</li>
-          <li>Liên Hệ</li>
-          <li>Sản Phẩm</li>
+        <ul className="footer-list">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Cosmetic</li>
         </ul>
-        <hr className="footer_hr" />
+        <hr
+          style={{
+            width: "1310px",
+            margin: "auto",
+            border: "1px solid #181616",
+          }}
+        />
         <div className="footer_icon">
-          <h2>Logo</h2>
+          <h2>Hasaki cosmetic</h2>
           <div className="footer_icon--list ">
             <YouTubeIcon className="footer_icon--item" />
             <FacebookIcon className="footer_icon--item" />

@@ -1,10 +1,17 @@
 import LogoutIcon from "@mui/icons-material/Logout";
-import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.scss";
 export default function Header() {
+  const [quantity, setQuantity] = useState(0);
+  const productCart = JSON.parse(localStorage.getItem("productCart")) || [];
+  useEffect(() => {
+    for (let i = 0; i < productCart.length; i++) {
+      setQuantity((prev) => prev + productCart[i].quantity);
+    }
+  }, []);
+
   const navigate = useNavigate();
   const navigateToSignup = () => {
     navigate("/signup-page");
@@ -29,37 +36,36 @@ export default function Header() {
     setUser([]);
     setIsCheck(false);
   };
+  const handleChangeCart = () => {
+    navigate("/cart");
+  };
   return (
     <>
       <header>
-        <div>
-          <h2>Logo</h2>
-        </div>
+        <h2>Hasaki cosmetic</h2>
         <ul>
-          <li onClick={navigateToHome}>Trang Chủ</li>
-          <li>Thông Tin</li>
-          <li>Liên Hệ</li>
-          <li>Sản Phẩm</li>
+          <li onClick={navigateToHome}>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Cosmetic</li>
         </ul>
         {isCheck ? (
           <div className="header_btn">
-            <SearchIcon className="header_btn--icon-search" />
             <h3 className="header_user-name">{user.username}</h3>
             <LogoutIcon className="header_icon-logout" onClick={handleLogOut} />
             <div className="header_icon-cart">
-              <ShoppingCartIcon />
-              <span>2</span>
+              <ShoppingCartIcon onClick={handleChangeCart} />
+              <span>{quantity}</span>
             </div>
           </div>
         ) : (
           <div className="header_btn">
-            <SearchIcon className="header_btn--icon-search" />
             <button className="header_btn--signup" onClick={navigateToSignup}>
-              Đăng Ký
+              Sign Up
             </button>
 
             <button className="header_btn--login" onClick={navigateToLogin}>
-              Đăng Nhập
+              Login
             </button>
           </div>
         )}

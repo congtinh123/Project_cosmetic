@@ -39,9 +39,6 @@ export default function LoginPage() {
       <Header />
       <div className="signin_container">
         <div>
-          <div>
-            <h2 className="signin_container_form--logo">Logo</h2>
-          </div>
           <div className="signin_container_form">
             <h1>Hi,Welcome Back</h1>
             <form onSubmit={handldeSubmit}>
