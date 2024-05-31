@@ -91,9 +91,6 @@ export default function SignUpPage() {
           <img src="src/assets/png/banner2.png" />
         </div>
         <div>
-          <div>
-            <h2 className="signup_container_form--logo">Logo</h2>
-          </div>
           <div className="signup_container_form">
             <h1>Welcome</h1>
             <p className="signup_container_form--text">
